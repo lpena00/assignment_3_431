@@ -1,0 +1,19 @@
+Question 5:
+
+rev (inorder (reflect (Node (v, l, r)))) 
+= rev (inorder (reflect r) @ [v] @ inorder (reflect l))  
+= rev (inorder (reflect l)) @ rev [v] @ rev (inorder (reflect r))  (* Property of rev *)
+= rev (inorder (reflect l)) @ [v] @ rev (inorder (reflect r))
+= inorder l @ [v] @ inorder r (* Inductive Hypothesis *)
+= inorder (Node (v, l, r)) 
+
+
+Question 6:
+
+postorder (reflect (Node (v, l, r)))
+= postorder (Node (v, reflect r, reflect l))
+= postorder (reflect r) @ postorder (reflect l) @ [v]
+= rev (preorder r) @ rev (preorder l) @ [v]  (* Inductive Hypothesis *)
+= rev (preorder l @ preorder r) @ [v] (* Property of rev *)
+= rev ([v] @ preorder l @ preorder r) (* Property of rev *)
+= rev (preorder (Node (v, l, r)))
