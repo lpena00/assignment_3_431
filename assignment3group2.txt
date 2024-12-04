@@ -11,10 +11,6 @@ Problem 2 Solution
 λAB. (λKL. K (λxy. x) L) (A (λxy. y) (λxy. x)) B
 λAB. A (λxy. y) (λxy. x) (λxy. x) B
 
-
-Original file line number	Diff line number	Diff line change
-@@ -0,0 +1,65 @@
-
 Problem 3 Solution
 
 A XOR B=(A AND NOT B) OR (NOT A AND B)
