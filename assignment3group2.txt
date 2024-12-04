@@ -1,3 +1,18 @@
+Problem 1 Solution
+
+λAB. A (λxy.y) B
+
+cannot be reduced
+
+Problem 2 Solution
+
+λAB. (λKL. K (λxy. x) L) ((λN. N (λxy. y) (λxy. x))A) B
+
+λAB. (λKL. K (λxy. x) L) (A (λxy. y) (λxy. x)) B
+λAB. A (λxy. y) (λxy. x) (λxy. x) B
+
+
+
 Question 5:
 
 rev (inorder (reflect (Node (v, l, r)))) 
